@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import elementTypes from "../helpers/elementTypes";
-import Canvas from "../components/Canvas";
-import elements from "../helpers/sampleCanvasElementsObject";
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import elementTypes from '../helpers/elementTypes';
+import Canvas from '../components/Canvas';
+import elements from '../helpers/sampleCanvasElementsObject';
 
 export default class EditorScreen extends React.Component {
   render() {
@@ -17,8 +17,8 @@ export default class EditorScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

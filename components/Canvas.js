@@ -1,12 +1,12 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-import elementTypes from "../helpers/elementTypes";
-import TextElement from "./canvas-elements/TextElement";
-import Draggable from "react-native-draggable";
+import Draggable from 'react-native-draggable';
+import update from 'immutability-helper';
+import elementTypes from '../helpers/elementTypes';
+import TextElement from './canvas-elements/TextElement';
 
-import update from "immutability-helper";
-import TextController from "./TextController";
+import TextController from './TextController';
 
 const DEFAULT_MIN_FONT_SIZE = 4;
 const DEFAULT_MAX_FONT_SIZE = 40;
@@ -17,8 +17,8 @@ export default class Canvas extends React.Component {
 
     this.state = {
       currentSelectedElement: 0,
-      //pass elements as serialized object to restore canvas state
-      elements: this.props.elements
+      // pass elements as serialized object to restore canvas state
+      elements: this.props.elements,
     };
   }
 
@@ -56,11 +56,11 @@ export default class Canvas extends React.Component {
             this.setState({
               elements: update(elements, {
                 [currentSelectedElement]: {
-                  props: { style: { fontSize: { $set: v[0] } } }
-                }
-              })
+                  props: { style: { fontSize: { $set: v[0] } } },
+                },
+              }),
             });
-          }
+          },
         };
         return (
           <TextController
@@ -94,10 +94,10 @@ export default class Canvas extends React.Component {
 
 const styles = StyleSheet.create({
   canvasViewContainer: {
-    flex: 0.8
+    flex: 0.8,
   },
   controlsContainer: {
     flex: 0.2,
-    backgroundColor: "#e3e3e322"
-  }
+    backgroundColor: '#e3e3e322',
+  },
 });

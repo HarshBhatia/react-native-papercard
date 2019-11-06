@@ -1,8 +1,8 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
-import MultiSlider from "@ptomasroos/react-native-multi-slider";
-import PropTypes from "prop-types";
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
+import PropTypes from 'prop-types';
 
 export default class TextController extends React.Component {
   static propTypes = {
@@ -10,8 +10,8 @@ export default class TextController extends React.Component {
     fontSizeOptions: PropTypes.shape({
       min: PropTypes.number,
       max: PropTypes.number,
-      onChange: PropTypes.func
-    })
+      onChange: PropTypes.func,
+    }),
   };
 
   static defaultProps = {
@@ -19,8 +19,8 @@ export default class TextController extends React.Component {
     fontSizeOptions: {
       min: 4,
       max: 40,
-      onChange: v => {}
-    }
+      onChange: v => {},
+    },
   };
 
   constructor(props, defaultProps) {

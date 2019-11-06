@@ -1,5 +1,5 @@
-import React from "react";
-import { Text } from "react-native";
+import React from 'react';
+import { Text } from 'react-native';
 
 export default class TextElement extends React.Component {
   render() {

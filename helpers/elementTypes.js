@@ -1,5 +1,5 @@
 const elementTypes = {
-  TEXT: "text"
+  TEXT: 'text',
 };
 
 export default elementTypes;
