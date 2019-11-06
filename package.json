@@ -8,11 +8,14 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^1.0.0",
     "expo": "^35.0.0",
     "expo-keep-awake": "~7.0.0",
+    "immutability-helper": "^3.0.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-draggable": "^1.0.21",
     "react-native-web": "^0.11.7"
   },
   "devDependencies": {
