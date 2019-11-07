@@ -19,13 +19,9 @@ export default class TextController extends React.Component {
     fontSizeOptions: {
       min: 4,
       max: 40,
-      onChange: v => {},
+      onChange: null,
     },
   };
-
-  constructor(props, defaultProps) {
-    super(props, defaultProps);
-  }
 
   render() {
     return (

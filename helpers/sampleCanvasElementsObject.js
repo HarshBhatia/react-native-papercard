@@ -1,6 +1,6 @@
 import elementTypes from './elementTypes';
 
-export default (sampleCanvasElementsObject = [
+const sampleCanvasElementsObject = [
   {
     key: 0,
     type: elementTypes.TEXT,
@@ -37,4 +37,6 @@ export default (sampleCanvasElementsObject = [
       },
     },
   },
-]);
+];
+
+export default sampleCanvasElementsObject;

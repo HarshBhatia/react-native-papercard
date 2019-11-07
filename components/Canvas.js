@@ -48,7 +48,7 @@ export default class Canvas extends React.Component {
     const { elements, currentSelectedElement } = this.state;
     const e = elements[currentSelectedElement];
     switch (e.type) {
-      case elementTypes.TEXT:
+      case elementTypes.TEXT: {
         const fontSizeOptions = {
           min: DEFAULT_MIN_FONT_SIZE,
           max: DEFAULT_MAX_FONT_SIZE,
@@ -68,9 +68,9 @@ export default class Canvas extends React.Component {
             fontSizeOptions={fontSizeOptions}
           />
         );
-
+      }
       default:
-        null;
+        return <>null</>;
     }
   };
 
