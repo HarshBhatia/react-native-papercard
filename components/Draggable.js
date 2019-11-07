@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { StyleSheet, View, PanResponder, Animated } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, View, PanResponder, Animated } from 'react-native';
 
 export default class Draggable extends Component {
   constructor() {
     super();
     this.state = {
-      pan: new Animated.ValueXY()
+      pan: new Animated.ValueXY(),
     };
   }
 
@@ -18,8 +18,8 @@ export default class Draggable extends Component {
       onStartShouldSetPanResponder: (e, gesture) => true,
       onPanResponderMove: Animated.event([
         null,
-        { dx: this.state.pan.x, dy: this.state.pan.y }
-      ])
+        { dx: this.state.pan.x, dy: this.state.pan.y },
+      ]),
       // adjusting delta value
     });
     this.state.pan.setValue({ x: 0, y: 0 });
@@ -27,7 +27,7 @@ export default class Draggable extends Component {
 
   render() {
     const panStyle = {
-      transform: this.state.pan.getTranslateTransform()
+      transform: this.state.pan.getTranslateTransform(),
     };
     return (
       <Animated.View
@@ -38,12 +38,12 @@ export default class Draggable extends Component {
   }
 }
 
-let CIRCLE_RADIUS = 30;
-let styles = StyleSheet.create({
+const CIRCLE_RADIUS = 30;
+const styles = StyleSheet.create({
   circle: {
-    backgroundColor: "skyblue",
+    backgroundColor: 'skyblue',
     width: CIRCLE_RADIUS * 2,
     height: CIRCLE_RADIUS * 2,
-    borderRadius: CIRCLE_RADIUS
-  }
+    borderRadius: CIRCLE_RADIUS,
+  },
 });
